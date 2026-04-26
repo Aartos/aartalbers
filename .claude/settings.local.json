@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(yarn add:*)",
+      "Bash(grep -n \"Nuxt Quick start\\\\|nuxt-quick-start\\\\|useFetch\\\\|$fetch\\\\|runtimeConfig\\\\|PREPR\\\\|graphql.*url\\\\|apollo\\\\|nuxt.*prepr\" /Users/aart/Projects/aartalbers/.prepr/llms-full.txt)",
+      "WebFetch(domain:raw.githubusercontent.com)"
+    ]
+  }
+}
