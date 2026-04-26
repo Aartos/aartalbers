@@ -20,7 +20,7 @@
             <div
               v-for="(card, index) in resolvedValueCards"
               :key="index"
-              class="p-8 bg-white/5 rounded-lg border border-white/10 backdrop-blur-sm"
+              class="col-span-5 sm:col-span-1 p-8 bg-white/5 rounded-lg border border-white/10 backdrop-blur-sm"
             >
               <span class="material-symbols-outlined text-secondary-fixed mb-4">{{ card.icon }}</span>
               <h3 class="font-headline-md text-headline-md text-white mb-2">{{ card.title }}</h3>
