@@ -1,0 +1,30 @@
+{
+  "label": "Component",
+  "ref": "sl000000-0000-0000-0000-000000000002",
+  "body": "Social Link",
+  "api_id": "SocialLink",
+  "icon": "fa-link",
+  "description": "A social/external link with a display label and URL. Used in the footer.",
+  "fields": [
+    {
+      "type": "Text",
+      "body": "Label",
+      "api_id": "label",
+      "appearance": "single_line",
+      "no_html": true,
+      "required": true,
+      "required_unless": null,
+      "description": "Display name shown in the footer (e.g. 'LinkedIn', 'GitHub', 'Read.cv')"
+    },
+    {
+      "type": "Text",
+      "body": "URL",
+      "api_id": "url",
+      "appearance": "single_line",
+      "no_html": true,
+      "required": true,
+      "required_unless": null,
+      "description": "Full URL including https://"
+    }
+  ]
+}

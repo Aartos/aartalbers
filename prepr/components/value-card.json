@@ -1,0 +1,38 @@
+{
+  "label": "Component",
+  "ref": "vc000000-0000-0000-0000-000000000001",
+  "body": "Value Card",
+  "api_id": "ValueCard",
+  "icon": "fa-id-card",
+  "description": "A philosophy/value highlight card with an icon, title, and description. Used in the Leadership Philosophy section.",
+  "fields": [
+    {
+      "type": "Text",
+      "body": "Icon",
+      "api_id": "icon",
+      "appearance": "single_line",
+      "no_html": true,
+      "required": true,
+      "required_unless": null,
+      "description": "Material Symbols icon name (e.g. 'psychology', 'hub', 'bolt')"
+    },
+    {
+      "type": "Text",
+      "body": "Title",
+      "api_id": "title",
+      "appearance": "single_line",
+      "no_html": true,
+      "required": true,
+      "required_unless": null
+    },
+    {
+      "type": "Text",
+      "body": "Description",
+      "api_id": "description",
+      "appearance": "textarea",
+      "no_html": true,
+      "required": true,
+      "required_unless": null
+    }
+  ]
+}

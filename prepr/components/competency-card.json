@@ -1,0 +1,80 @@
+{
+  "label": "Component",
+  "ref": "cc000000-0000-0000-0000-000000000003",
+  "body": "Competency Card",
+  "api_id": "CompetencyCard",
+  "icon": "fa-th-large",
+  "description": "A bento-grid skill/competency card. Mark one card as featured to give it the large two-column layout.",
+  "fields": [
+    {
+      "type": "Boolean",
+      "body": "Featured (large card)",
+      "api_id": "is_featured",
+      "required": false,
+      "required_unless": null,
+      "description": "When enabled this card spans two columns and shows an image alongside the text.",
+      "default_value": false,
+      "true": "Featured",
+      "false": "Normal"
+    },
+    {
+      "type": "Text",
+      "body": "Category",
+      "api_id": "category",
+      "appearance": "single_line",
+      "no_html": true,
+      "required": false,
+      "required_unless": null,
+      "description": "Short category label shown as a pill badge on the featured card (e.g. 'Distributed Systems')"
+    },
+    {
+      "type": "Text",
+      "body": "Title",
+      "api_id": "title",
+      "appearance": "single_line",
+      "no_html": true,
+      "required": true,
+      "required_unless": null
+    },
+    {
+      "type": "Text",
+      "body": "Description",
+      "api_id": "description",
+      "appearance": "textarea",
+      "no_html": true,
+      "required": true,
+      "required_unless": null
+    },
+    {
+      "type": "Asset",
+      "body": "Image",
+      "api_id": "image",
+      "accept": ["photo"],
+      "allow_multiple": false,
+      "min": 0,
+      "max": 1,
+      "required": false,
+      "required_unless": null,
+      "description": "Image shown on the featured card (optional for non-featured cards)"
+    },
+    {
+      "type": "Tags",
+      "body": "Tags",
+      "api_id": "tags",
+      "required": false,
+      "required_unless": null,
+      "description": "Technology tags shown as pills on the featured card (e.g. AWS, Kubernetes)"
+    },
+    {
+      "type": "Text",
+      "body": "Background Style",
+      "api_id": "background_style",
+      "appearance": "single_line",
+      "no_html": true,
+      "required": false,
+      "required_unless": null,
+      "description": "Card background: 'white' (default), 'secondary' (dark brown), or 'primary' (teal). Defaults to 'white' if blank.",
+      "default_value": "white"
+    }
+  ]
+}

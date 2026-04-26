@@ -4,6 +4,11 @@ export default defineNuxtConfig({
     devtools: {enabled: true},
     modules: ['@nuxtjs/tailwindcss'],
     css: ['~/assets/css/main.css'],
+    runtimeConfig: {
+        public: {
+            preprToken: process.env.NUXT_PUBLIC_PREPR_TOKEN ?? '',
+        },
+    },
     vite: {
         optimizeDeps: {
             include: [
