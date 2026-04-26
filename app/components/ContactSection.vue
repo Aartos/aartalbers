@@ -3,8 +3,7 @@
     <div class="bg-white rounded-xl overflow-hidden shadow-2xl border border-stone-100">
       <div class="p-16 bg-[#FDFBF7] flex flex-col justify-center space-y-8">
         <h2 class="font-headline-xl text-headline-xl text-primary-container" v-html="headlineHtml" />
-        <p class="font-body-lg text-body-lg text-on-surface-variant">
-          {{ subheading }}
+        <p class="font-body-lg text-body-lg text-on-surface-variant" v-html="subheading">
         </p>
         <div class="space-y-4">
           <div class="flex items-center gap-4">
