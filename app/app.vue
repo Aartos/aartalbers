@@ -1,7 +1,9 @@
 <template>
   <div class="font-body-md text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
     <NuxtRouteAnnouncer />
-    <TheNavBar :brand-name="page?.brand_name" />
+    <TheNavBar
+        :brand-name="page?.brand_name"
+    />
     <main class="mt-32">
       <HeroSection
         :badge="page?.hero_badge"
@@ -13,6 +15,7 @@
         :stats-subtitle="page?.hero_stats_subtitle"
         :primary-cta="page?.hero_primary_cta"
         :secondary-cta="page?.hero_secondary_cta"
+        :social-links="page?.footer_social_links"
       />
       <LeadershipPhilosophy
         :headline="page?.philosophy_headline"

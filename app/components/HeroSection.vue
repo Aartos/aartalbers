@@ -10,12 +10,15 @@
         {{ subheading }}
       </p>
       <div class="flex gap-4">
-        <button class="bg-primary-container text-on-primary px-10 py-4 rounded-full font-headline-md text-body-md hover:shadow-lg transition-all active:scale-95">
-          {{ primaryCta }}
-        </button>
-        <button class="border-2 border-primary-container/20 text-primary-container px-10 py-4 rounded-full font-headline-md text-body-md hover:bg-stone-50 transition-all active:scale-95">
-          {{ secondaryCta }}
-        </button>
+        <a
+            v-for="(link, index) in resolvedLinks"
+            :key="link.label"
+            :href="link.url"
+            target="_blank"
+            :class="index === 0
+              ? 'bg-primary-container text-on-primary px-10 py-4 rounded-full font-headline-md text-body-md hover:shadow-lg transition-all active:scale-95'
+              : 'border-2 border-primary-container/20 text-primary-container px-10 py-4 rounded-full font-headline-md text-body-md hover:bg-stone-50 transition-all active:scale-95'"
+        >{{ link.label }}</a>
       </div>
     </div>
     <div class="relative group">
@@ -47,6 +50,7 @@ const props = defineProps<{
   statsSubtitle?: string | null
   primaryCta?: string | null
   secondaryCta?: string | null
+  socialLinks?: SocialLinkItem[] | null
 }>()
 
 const badge = computed(() => props.badge ?? 'EXECUTIVE LEADERSHIP')
@@ -60,5 +64,14 @@ const secondaryCta = computed(() => props.secondaryCta ?? 'Download CV')
 const headlineHtml = computed(() => {
   if (props.headline) return props.headline
   return 'Architecting Resilient <br /><span class="text-secondary italic">Digital Ecosystems</span>'
+})
+
+
+import type { SocialLinkItem } from '~/queries/homepage'
+interface Link { label: string; url: string }
+
+const resolvedLinks = computed<Link[]>(() => {
+  if (!props.socialLinks?.length) return []
+  return props.socialLinks.map((l) => ({ label: l.label, url: l.url }))
 })
 </script>

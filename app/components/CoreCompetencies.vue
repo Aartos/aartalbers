@@ -1,5 +1,5 @@
 <template>
-  <section class="max-w-[1200px] mx-auto px-8 py-32">
+  <section id="competencies" class="max-w-[1200px] mx-auto px-8 py-32">
     <div class="text-center mb-20">
       <h2 class="font-headline-xl text-headline-xl text-primary-container mb-4">{{ headline }}</h2>
       <p class="font-body-lg text-body-lg text-on-surface-variant">{{ subtitle }}</p>
@@ -58,10 +58,25 @@
         <!-- Default white card -->
         <div
           v-else
-          class="bg-white p-padding-card rounded-xl shadow-[0_20px_40px_-15px_rgba(13,77,77,0.04)] border border-stone-100"
+          class="col-span-3 bg-white p-padding-card rounded-xl shadow-[0_20px_40px_-15px_rgba(13,77,77,0.04)] border border-stone-100"
         >
-          <h3 class="font-headline-md text-headline-md mb-4">{{ card.title }}</h3>
-          <p class="font-body-md text-body-md text-on-surface-variant">{{ card.description }}</p>
+          <div class="flex-1 space-y-6">
+            <div class="inline-block bg-primary-container/10 text-primary-container px-4 py-1 rounded-full font-label-md text-label-md uppercase">
+              {{ card.category }}
+            </div>
+            <h3 class="font-headline-lg text-headline-lg">{{ card.title }}</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">{{ card.description }}</p>
+            <div v-if="card.tags?.length" class="flex flex-wrap gap-2">
+              <span
+                  v-for="tag in card.tags"
+                  :key="tag.body"
+                  class="px-4 py-2 bg-stone-100 rounded-full text-sm font-bold"
+              >{{ tag.body }}</span>
+            </div>
+          </div>
+          <div v-if="card.imageUrl" class="w-full md:w-1/3 aspect-square rounded-lg overflow-hidden">
+            <img :alt="card.title" class="w-full h-full object-cover" :src="card.imageUrl" />
+          </div>
         </div>
       </template>
     </div>

@@ -31,14 +31,8 @@ const copyright = computed(() => props.copyright ?? '2024 Systems Engineering. B
 
 interface Link { label: string; url: string }
 
-const defaultLinks: Link[] = [
-  { label: 'LinkedIn', url: '#' },
-  { label: 'GitHub', url: '#' },
-  { label: 'Read.cv', url: '#' },
-]
-
 const resolvedLinks = computed<Link[]>(() => {
-  if (!props.socialLinks?.length) return defaultLinks
+  if (!props.socialLinks?.length) return []
   return props.socialLinks.map((l) => ({ label: l.label, url: l.url }))
 })
 </script>

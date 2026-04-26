@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-primary-container py-32 rounded-[4rem] mx-4 overflow-hidden relative">
+  <section id="philosophy" class="bg-primary-container py-32 rounded-[4rem] mx-4 overflow-hidden relative">
     <div class="absolute top-0 right-0 w-1/3 h-full opacity-10">
       <img
         alt="Abstract Code Pattern"
