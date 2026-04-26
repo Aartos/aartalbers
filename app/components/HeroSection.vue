@@ -1,0 +1,40 @@
+<template>
+  <section class="max-w-[1200px] mx-auto px-8 mb-24 grid md:grid-cols-2 gap-16 items-center">
+    <div class="space-y-8">
+      <div class="inline-flex items-center gap-2 bg-secondary-container/10 text-secondary px-4 py-1 rounded-full border border-secondary-container/20">
+        <span class="material-symbols-outlined text-[18px]">verified</span>
+        <span class="font-label-md text-label-md">EXECUTIVE LEADERSHIP</span>
+      </div>
+      <h1 class="font-headline-xl text-headline-xl text-primary-container leading-tight">
+        Architecting Resilient <br />
+        <span class="text-secondary italic">Digital Ecosystems</span>
+      </h1>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+        Senior Backend Engineer &amp; Team Lead specializing in distributed systems, high-concurrency architecture, and the human side of technical excellence.
+      </p>
+      <div class="flex gap-4">
+        <button class="bg-primary-container text-on-primary px-10 py-4 rounded-full font-headline-md text-body-md hover:shadow-lg transition-all active:scale-95">
+          View Portfolio
+        </button>
+        <button class="border-2 border-primary-container/20 text-primary-container px-10 py-4 rounded-full font-headline-md text-body-md hover:bg-stone-50 transition-all active:scale-95">
+          Download CV
+        </button>
+      </div>
+    </div>
+    <div class="relative group">
+      <div class="absolute -inset-4 bg-secondary-container/5 rounded-[4rem] -z-10 group-hover:bg-secondary-container/10 transition-all duration-700"></div>
+      <div class="aspect-square w-full rounded-[4rem] overflow-hidden shadow-2xl">
+        <img
+          alt="Senior Backend Developer Portrait"
+          class="w-full h-full object-cover"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBReVHKJvI9ASVaG9FrN-0E_FFuACqzohxhKFnXBKiI2-nfFLw6mSpAK4ERnwCCpksf2EE_K3yG06HMUa96XtvH-XKAw-zkVuT29ONxVKW8BYcYtwfQKQb0M01uNULcUpKSaRCULrxEeOlokC7f1fMbnOtPGQ_AJglKjr23uEMtcJ_z3Pv7-2ydgwpKHcPSY9ukytKTQKv5ECm6VrXsRPiZJTC2enonCRK0ym3piHCp5sPoQoetcJTmZlNjS-9ucc4fBDAFe2ibJsU"
+        />
+      </div>
+      <div class="absolute -bottom-8 -right-8 bg-white p-8 rounded-xl shadow-xl border border-stone-100 max-w-[240px]">
+        <span class="material-symbols-outlined text-secondary text-4xl mb-2">terminal</span>
+        <p class="font-headline-md text-headline-md text-primary-container mb-1">12+ Years</p>
+        <p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Architectural Mastery</p>
+      </div>
+    </div>
+  </section>
+</template>

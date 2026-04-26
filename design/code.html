@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lead Architect | Senior Systems Engineering</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#1a1c19",
+                    "on-surface-variant": "#404848",
+                    "tertiary-container": "#434542",
+                    "primary-fixed": "#b4edec",
+                    "on-surface": "#1c1b1b",
+                    "outline-variant": "#bfc8c8",
+                    "surface-tint": "#2e6767",
+                    "on-secondary": "#ffffff",
+                    "surface": "#fcf9f8",
+                    "on-error-container": "#93000a",
+                    "secondary-container": "#fe932c",
+                    "tertiary-fixed-dim": "#c6c7c2",
+                    "surface-variant": "#e5e2e1",
+                    "on-primary-fixed-variant": "#104f4f",
+                    "secondary-fixed-dim": "#ffb77d",
+                    "primary-fixed-dim": "#98d1d0",
+                    "surface-container-high": "#eae7e7",
+                    "surface-bright": "#fcf9f8",
+                    "on-primary-container": "#85bdbc",
+                    "secondary-fixed": "#ffdcc3",
+                    "on-secondary-container": "#663500",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-highest": "#e5e2e1",
+                    "primary": "#003535",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed-variant": "#6e3900",
+                    "on-background": "#1c1b1b",
+                    "on-tertiary-container": "#b2b3ae",
+                    "inverse-surface": "#313030",
+                    "surface-dim": "#dcd9d9",
+                    "inverse-on-surface": "#f3f0ef",
+                    "tertiary": "#2d2f2c",
+                    "on-tertiary-fixed-variant": "#454744",
+                    "on-primary-fixed": "#002020",
+                    "background": "#fcf9f8",
+                    "outline": "#707978",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed": "#e3e3de",
+                    "secondary": "#904d00",
+                    "primary-container": "#0d4d4d",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed": "#2f1500",
+                    "inverse-primary": "#98d1d0",
+                    "surface-container-low": "#f6f3f2",
+                    "surface-container": "#f0eded",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter-grid": "24px",
+                    "unit": "4px",
+                    "padding-card": "32px",
+                    "stack-gap": "16px",
+                    "margin-page": "48px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Noto Serif"],
+                    "body-md": ["Noto Serif"],
+                    "headline-xl": ["Noto Serif"],
+                    "headline-md": ["Noto Serif"],
+                    "label-md": ["Noto Serif"],
+                    "body-lg": ["Noto Serif"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #FDFBF7;
+            color: #1c1b1b;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#FDFBF7] dark:bg-stone-950/80 backdrop-blur-md border-b border-stone-200/50 dark:border-stone-800/50 shadow-[0_20px_40px_-15px_rgba(13,77,77,0.04)]">
+<div class="flex justify-between items-center w-full px-8 py-6 max-w-[1200px] mx-auto">
+<div class="text-2xl font-bold font-serif text-[#0D4D4D] dark:text-teal-400">Lead Architect</div>
+<div class="hidden md:flex gap-12 items-center">
+<a class="font-serif text-lg tracking-tight text-[#0D4D4D] dark:text-teal-400 font-bold relative after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-[#B37000] after:rounded-full" href="#">Systems</a>
+<a class="font-serif text-lg tracking-tight text-stone-600 dark:text-stone-400 hover:text-[#0D4D4D] dark:hover:text-teal-300 transition-all duration-300" href="#">Infrastructure</a>
+<a class="font-serif text-lg tracking-tight text-stone-600 dark:text-stone-400 hover:text-[#0D4D4D] dark:hover:text-teal-300 transition-all duration-300" href="#">Strategy</a>
+<a class="font-serif text-lg tracking-tight text-stone-600 dark:text-stone-400 hover:text-[#0D4D4D] dark:hover:text-teal-300 transition-all duration-300" href="#">Journal</a>
+</div>
+<button class="bg-[#0D4D4D] text-white px-8 py-3 rounded-full font-serif text-lg tracking-tight hover:bg-[#104f4f] transition-all active:scale-95">Get in Touch</button>
+</div>
+</nav>
+<main class="mt-32">
+<!-- Hero Section -->
+<section class="max-w-[1200px] mx-auto px-8 mb-24 grid md:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 bg-secondary-container/10 text-secondary px-4 py-1 rounded-full border border-secondary-container/20">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-label-md text-label-md">EXECUTIVE LEADERSHIP</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary-container leading-tight">
+                    Architecting Resilient <br/>
+<span class="text-secondary italic">Digital Ecosystems</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                    Senior Backend Engineer &amp; Team Lead specializing in distributed systems, high-concurrency architecture, and the human side of technical excellence.
+                </p>
+<div class="flex gap-4">
+<button class="bg-primary-container text-on-primary px-10 py-4 rounded-full font-headline-md text-body-md hover:shadow-lg transition-all active:scale-95">
+                        View Portfolio
+                    </button>
+<button class="border-2 border-primary-container/20 text-primary-container px-10 py-4 rounded-full font-headline-md text-body-md hover:bg-stone-50 transition-all active:scale-95">
+                        Download CV
+                    </button>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-secondary-container/5 rounded-[4rem] -z-10 group-hover:bg-secondary-container/10 transition-all duration-700"></div>
+<div class="aspect-square w-full rounded-[4rem] overflow-hidden shadow-2xl">
+<img alt="Senior Backend Developer Portrait" class="w-full h-full object-cover" data-alt="Professional portrait of a mature male developer with glasses, warm smiling expression, neutral studio background with soft artistic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBReVHKJvI9ASVaG9FrN-0E_FFuACqzohxhKFnXBKiI2-nfFLw6mSpAK4ERnwCCpksf2EE_K3yG06HMUa96XtvH-XKAw-zkVuT29ONxVKW8BYcYtwfQKQb0M01uNULcUpKSaRCULrxEeOlokC7f1fMbnOtPGQ_AJglKjr23uEMtcJ_z3Pv7-2ydgwpKHcPSY9ukytKTQKv5ECm6VrXsRPiZJTC2enonCRK0ym3piHCp5sPoQoetcJTmZlNjS-9ucc4fBDAFe2ibJsU"/>
+</div>
+<div class="absolute -bottom-8 -right-8 bg-white p-8 rounded-xl shadow-xl border border-stone-100 max-w-[240px]">
+<span class="material-symbols-outlined text-secondary text-4xl mb-2">terminal</span>
+<p class="font-headline-md text-headline-md text-primary-container mb-1">12+ Years</p>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Architectural Mastery</p>
+</div>
+</div>
+</section>
+<!-- Leadership Philosophy -->
+<section class="bg-primary-container py-32 rounded-[4rem] mx-4 overflow-hidden relative">
+<div class="absolute top-0 right-0 w-1/3 h-full opacity-10">
+<img alt="Abstract Code Pattern" class="w-full h-full object-cover grayscale" data-alt="Close up shot of dark digital screen with glowing teal abstract data patterns and matrix-like code structures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzhA3Orsqo9ZQ6hxkdkhfgb9QnMHeJfh2Z_Ys74femAcfgMod5kjmAV6jKPxYeTCfNeLvfUO1XnDpROAinIufurtimTzTI7nL0YG8WwWk8JtswoVOGzKBMtCKz-2mKn3ZW1OpyIF8X8FLkIZiTPjMqEWWmkv-mqOmb2mq9RsVDMJ2EAfSrSVJP_B-fT6BxrszncjNRQ054ipsm3hxt03B1Vy58aOzwCs7UP2Lxbu65YMr6g5nTVjm8nKJNz_fO5bHim0skA1HmmiY"/>
+</div>
+<div class="max-w-[1200px] mx-auto px-8 relative z-10">
+<div class="grid md:grid-cols-12 gap-12 items-end">
+<div class="md:col-span-7 space-y-12">
+<div class="space-y-6">
+<h2 class="font-headline-xl text-headline-xl text-white">Philosophy of <br/><span class="text-secondary-fixed">Deep Systems</span></h2>
+<p class="font-body-lg text-body-lg text-on-primary-container/80 leading-relaxed">
+                                I believe backend architecture is an exercise in empathy. We build systems not just to handle loads, but to provide reliability to users and maintainability to developers. My leadership focuses on radical transparency and technical rigor.
+                            </p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="p-8 bg-white/5 rounded-lg border border-white/10 backdrop-blur-sm">
+<span class="material-symbols-outlined text-secondary-fixed mb-4">psychology</span>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Team Growth</h3>
+<p class="font-body-md text-body-md text-white/60">Mentorship through pair programming and architectural reviews.</p>
+</div>
+<div class="p-8 bg-white/5 rounded-lg border border-white/10 backdrop-blur-sm">
+<span class="material-symbols-outlined text-secondary-fixed mb-4">hub</span>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Scalability</h3>
+<p class="font-body-md text-body-md text-white/60">Designing for tomorrow's scale without over-engineering today.</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-5 flex justify-end">
+<div class="bg-secondary-fixed p-12 rounded-[3rem] text-on-secondary-fixed shadow-2xl">
+<span class="material-symbols-outlined text-5xl mb-6">format_quote</span>
+<p class="font-headline-md text-headline-md italic mb-8">"Complexity is a tax on productivity. My role is to simplify the core so the edges can flourish."</p>
+<p class="font-label-md text-label-md uppercase tracking-widest font-bold">— THE ARCHITECT'S CREED</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Architecture (Bento Grid) -->
+<section class="max-w-[1200px] mx-auto px-8 py-32">
+<div class="text-center mb-20">
+<h2 class="font-headline-xl text-headline-xl text-primary-container mb-4">Core Competencies</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">The tools and methodologies that define my output.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Large Card -->
+<div class="md:col-span-2 bg-white p-padding-card rounded-xl shadow-[0_20px_40px_-15px_rgba(13,77,77,0.04)] border border-stone-100 flex flex-col md:flex-row gap-8 items-center">
+<div class="flex-1 space-y-6">
+<div class="inline-block bg-primary-container/10 text-primary-container px-4 py-1 rounded-full font-label-md text-label-md uppercase">Distributed Systems</div>
+<h3 class="font-headline-lg text-headline-lg">Cloud Infrastructure &amp; Microservices</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Specializing in Kubernetes orchestration, AWS serverless patterns, and event-driven architecture with Kafka and RabbitMQ.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-2 bg-stone-100 rounded-full text-sm font-bold">AWS</span>
+<span class="px-4 py-2 bg-stone-100 rounded-full text-sm font-bold">Kubernetes</span>
+<span class="px-4 py-2 bg-stone-100 rounded-full text-sm font-bold">Terraform</span>
+</div>
+</div>
+<div class="w-full md:w-1/3 aspect-square rounded-lg overflow-hidden">
+<img alt="Cloud Systems" class="w-full h-full object-cover" data-alt="Abstract satellite view of earth at night with glowing blue and teal connections representing a global data network" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYnUC5EAmO6VAbjePgg8nBvhOkyuaBs6Zak_u-dm_egORhF4qard1UNbtgwECyWl6b3BQwLvNZr4Q_sDYnX5KlBzWaNFQAe8-g9Rji-wqnnpGFoRQdTIE4sn5Be_DFYFy93WCIeqPIw821jB-8SCPYAXMAJMGVTGexE7bY8wVt3-9iRdr3n7SgVRYyddeHs_a0lqZjpJwsklNqWL-B2tAGOgo1eOxRrRvb8SSJ9S-KWiro5qSDU4KYAIAQ0OskT5h1a54AQe5aQPE"/>
+</div>
+</div>
+<!-- Vertical Card -->
+<div class="bg-secondary-fixed text-on-secondary-fixed p-padding-card rounded-xl flex flex-col justify-between">
+<div class="space-y-6">
+<span class="material-symbols-outlined text-4xl" data-weight="fill">database</span>
+<h3 class="font-headline-md text-headline-md">Data Resilience</h3>
+<p class="font-body-md text-body-md">Advanced PostgreSQL tuning, Redis caching strategies, and NoSQL modeling for high-throughput applications.</p>
+</div>
+<button class="mt-8 flex items-center gap-2 font-bold group">
+                        Case Studies 
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<!-- Small Grid Items -->
+<div class="bg-white p-padding-card rounded-xl shadow-[0_20px_40px_-15px_rgba(13,77,77,0.04)] border border-stone-100">
+<h3 class="font-headline-md text-headline-md mb-4">Go &amp; Rust</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Writing high-performance, memory-safe backend services with a focus on concurrency.</p>
+</div>
+<div class="bg-white p-padding-card rounded-xl shadow-[0_20px_40px_-15px_rgba(13,77,77,0.04)] border border-stone-100">
+<h3 class="font-headline-md text-headline-md mb-4">Observability</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Implementing Prometheus, Grafana, and ELK stacks for real-time system health tracking.</p>
+</div>
+<div class="bg-primary-container p-padding-card rounded-xl text-white">
+<h3 class="font-headline-md text-headline-md mb-4">Security First</h3>
+<p class="font-body-md text-body-md text-white/70">SOC2 compliance, OAuth2 implementation, and rigorous penetration testing protocols.</p>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="max-w-[1200px] mx-auto px-8 pb-32">
+<div class="bg-white rounded-xl overflow-hidden shadow-2xl border border-stone-100 grid md:grid-cols-2">
+<div class="p-16 bg-[#FDFBF7] flex flex-col justify-center space-y-8">
+<h2 class="font-headline-xl text-headline-xl text-primary-container">Let's build <br/><span class="text-secondary">the future.</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Currently open to fractional leadership roles or senior-level architectural consulting.</p>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary-container/5 rounded-full flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<span class="font-headline-md text-body-md">hello@leadarchitect.systems</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary-container/5 rounded-full flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<span class="font-headline-md text-body-md">Remote / London, UK</span>
+</div>
+</div>
+</div>
+<div class="p-16 bg-white">
+<form class="space-y-6">
+<div class="space-y-2">
+<label class="font-label-md text-label-md uppercase text-on-surface-variant">Full Name</label>
+<input class="w-full px-6 py-4 rounded-full border border-stone-200 focus:ring-2 focus:ring-primary-container focus:outline-none transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md uppercase text-on-surface-variant">Email Address</label>
+<input class="w-full px-6 py-4 rounded-full border border-stone-200 focus:ring-2 focus:ring-primary-container focus:outline-none transition-all" placeholder="john@company.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md uppercase text-on-surface-variant">Project Brief</label>
+<textarea class="w-full px-6 py-4 rounded-xl border border-stone-200 focus:ring-2 focus:ring-primary-container focus:outline-none transition-all" placeholder="Tell me about your architectural needs..." rows="4"></textarea>
+</div>
+<button class="w-full bg-secondary-container text-on-secondary-container font-headline-md text-headline-md py-6 rounded-full hover:bg-secondary-fixed transition-all active:scale-[0.98]">
+                            Initiate Connection
+                        </button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#FDFBF7] dark:bg-stone-950 w-full border-t border-stone-200 dark:border-stone-800 rounded-t-[48px]">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 max-w-[1200px] mx-auto gap-8">
+<div class="text-xl font-bold text-[#0D4D4D] dark:text-teal-400 font-serif">Lead Architect</div>
+<p class="font-serif text-sm uppercase tracking-widest text-stone-500 dark:text-stone-500 text-center">
+                © 2024 Systems Engineering. Built with precision and intent.
+            </p>
+<div class="flex gap-8">
+<a class="font-serif text-sm uppercase tracking-widest text-stone-500 dark:text-stone-500 hover:text-[#0D4D4D] dark:hover:text-teal-300 transition-colors" href="#">LinkedIn</a>
+<a class="font-serif text-sm uppercase tracking-widest text-stone-500 dark:text-stone-500 hover:text-[#0D4D4D] dark:hover:text-teal-300 transition-colors" href="#">GitHub</a>
+<a class="font-serif text-sm uppercase tracking-widest text-stone-500 dark:text-stone-500 hover:text-[#0D4D4D] dark:hover:text-teal-300 transition-colors" href="#">Read.cv</a>
+</div>
+</div>
+</footer>
+</body></html>
