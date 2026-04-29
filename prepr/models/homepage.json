@@ -243,6 +243,16 @@
       "description": "Without the © symbol."
     },
     {
+      "type": "Text",
+      "body": "Scripts (e.g. Tag Manager)",
+      "api_id": "scripts",
+      "appearance": "textarea",
+      "no_html": false,
+      "required": false,
+      "required_unless": null,
+      "description": "Add scripts like Google Tag Manager here."
+    },
+    {
       "type": "Stack",
       "body": "Footer — Social links",
       "api_id": "footer_social_links",

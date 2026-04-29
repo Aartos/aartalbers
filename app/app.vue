@@ -58,4 +58,25 @@ const { data: page } = await useAsyncData<HomePage | null>('homepage', async () 
     return null
   }
 })
+
+// Append scripts to the head node
+if (page.value?.scripts) {
+  useHead({
+    script: page.value.scripts.match(/<script\b[^>]*>([\s\S]*?)<\/script>/gmi)?.map(scriptTag => {
+      const srcMatch = scriptTag.match(/src=["'](.+?)["']/i)
+      const contentMatch = scriptTag.match(/<script\b[^>]*>([\s\S]*?)<\/script>/i)
+      const typeMatch = scriptTag.match(/type=["'](.+?)["']/i)
+      const asyncMatch = / async[ >]/i.test(scriptTag)
+      const deferMatch = / defer[ >]/i.test(scriptTag)
+
+      return {
+        src: srcMatch ? srcMatch[1] : undefined,
+        innerHTML: (!srcMatch && contentMatch) ? contentMatch[1] : undefined,
+        type: typeMatch ? typeMatch[1] : undefined,
+        async: asyncMatch || undefined,
+        defer: deferMatch || undefined
+      }
+    }) || []
+  })
+}
 </script>

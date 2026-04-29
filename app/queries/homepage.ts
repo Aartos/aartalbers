@@ -55,6 +55,7 @@ export interface HomePage {
   brand_name: string
   footer_copyright: string
   footer_social_links: SocialLinkItem[]
+  scripts: string
 }
 
 export const GET_HOMEPAGE = `
@@ -101,6 +102,7 @@ export const GET_HOMEPAGE = `
       contact_location
       brand_name
       footer_copyright
+      scripts
       footer_social_links {
         __typename
         ... on SocialLink {
