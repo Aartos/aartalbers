@@ -31,6 +31,7 @@ export interface SocialLinkItem {
 }
 
 export interface HomePage {
+  _id: string
   hero_badge: string
   hero_headline: string
   hero_subheading: string
@@ -61,6 +62,7 @@ export interface HomePage {
 export const GET_HOMEPAGE = `
   query GetHomePage {
     HomePage {
+      _id
       hero_badge
       hero_headline
       hero_subheading
