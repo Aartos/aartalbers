@@ -1,0 +1,58 @@
+{
+  "label": "Model",
+  "ref": "p0000000-0000-0000-0000-000000000001",
+  "body": "Page",
+  "body_singular": "Page",
+  "body_plural": "Pages",
+  "single_instance": false,
+  "description": "Dynamic pages for the website.",
+  "fields": [
+    {
+      "type": "Text",
+      "body": "Title",
+      "api_id": "title",
+      "appearance": "single_line",
+      "no_html": true,
+      "required": true
+    },
+    {
+      "type": "Slug",
+      "body": "Slug",
+      "api_id": "slug",
+      "required": true
+    },
+    {
+      "type": "Stack",
+      "body": "Content",
+      "api_id": "content",
+      "required": false,
+      "types": [
+        {
+          "ref": "hs000000-0000-0000-0000-000000000001",
+          "label": "Component",
+          "api_id": "HeroSection",
+          "position": 1
+        },
+        {
+          "ref": "lp000000-0000-0000-0000-000000000001",
+          "label": "Component",
+          "api_id": "LeadershipPhilosophy",
+          "position": 2
+        },
+        {
+          "ref": "cc000000-0000-0000-0000-000000000001",
+          "label": "Component",
+          "api_id": "CoreCompetencies",
+          "position": 3
+        },
+        {
+          "ref": "cs000000-0000-0000-0000-000000000001",
+          "label": "Component",
+          "api_id": "ContactSection",
+          "position": 4
+        }
+      ],
+      "allow_multiple": true
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "label": "Component",
+  "ref": "hs000000-0000-0000-0000-000000000001",
+  "body": "Hero Section",
+  "api_id": "HeroSection",
+  "icon": "fa-star",
+  "fields": [
+    {
+      "type": "Text",
+      "body": "Badge",
+      "api_id": "badge",
+      "appearance": "single_line",
+      "no_html": true,
+      "required": true
+    },
+    {
+      "type": "Text",
+      "body": "Headline",
+      "api_id": "headline",
+      "appearance": "single_line",
+      "no_html": true,
+      "required": true
+    },
+    {
+      "type": "Text",
+      "body": "Subheading",
+      "api_id": "subheading",
+      "appearance": "textarea",
+      "no_html": true,
+      "required": true
+    },
+    {
+      "type": "Asset",
+      "body": "Portrait",
+      "api_id": "portrait",
+      "accept": ["photo"],
+      "allow_multiple": false,
+      "required": true,
+      "min": 1,
+      "max": 1
+    },
+    {
+      "type": "Text",
+      "body": "Stats Number",
+      "api_id": "stats_number",
+      "appearance": "single_line",
+      "no_html": true,
+      "required": true
+    },
+    {
+      "type": "Text",
+      "body": "Stats Label",
+      "api_id": "stats_label",
+      "appearance": "single_line",
+      "no_html": true,
+      "required": false
+    },
+    {
+      "type": "Text",
+      "body": "Stats Subtitle",
+      "api_id": "stats_subtitle",
+      "appearance": "single_line",
+      "no_html": true,
+      "required": true
+    },
+    {
+      "type": "Text",
+      "body": "Primary CTA",
+      "api_id": "primary_cta",
+      "appearance": "single_line",
+      "no_html": true,
+      "required": true
+    },
+    {
+      "type": "Text",
+      "body": "Secondary CTA",
+      "api_id": "secondary_cta",
+      "appearance": "single_line",
+      "no_html": true,
+      "required": true
+    },
+    {
+      "type": "Stack",
+      "body": "Links",
+      "api_id": "links",
+      "required": false,
+      "types": [
+        {
+          "ref": "sl000000-0000-0000-0000-000000000002",
+          "label": "Component",
+          "api_id": "Link",
+          "position": 1
+        }
+      ],
+      "allow_multiple": true
+    }
+  ]
+}

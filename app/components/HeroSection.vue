@@ -14,7 +14,7 @@
             v-for="(link, index) in resolvedLinks"
             :key="link.label"
             :href="link.url"
-            target="_blank"
+            :target="link.open_in_new_tab ? '_blank' : '_self'"
             :class="index === 0
               ? 'bg-primary-container text-on-primary px-10 py-4 rounded-full font-headline-md text-body-md hover:shadow-lg transition-all active:scale-95'
               : 'border-2 border-primary-container/20 text-primary-container px-10 py-4 rounded-full font-headline-md text-body-md hover:bg-stone-50 transition-all active:scale-95'"
@@ -50,7 +50,7 @@ const props = defineProps<{
   statsSubtitle?: string | null
   primaryCta?: string | null
   secondaryCta?: string | null
-  socialLinks?: SocialLinkItem[] | null
+  links?: Array<{ label: string; url: string; open_in_new_tab?: boolean }> | null
 }>()
 
 const badge = computed(() => props.badge ?? 'EXECUTIVE LEADERSHIP')
@@ -66,12 +66,10 @@ const headlineHtml = computed(() => {
   return 'Architecting Resilient <br /><span class="text-secondary italic">Digital Ecosystems</span>'
 })
 
-
-import type { SocialLinkItem } from '~/queries/homepage'
-interface Link { label: string; url: string }
+interface Link { label: string; url: string; open_in_new_tab?: boolean }
 
 const resolvedLinks = computed<Link[]>(() => {
-  if (!props.socialLinks?.length) return []
-  return props.socialLinks.map((l) => ({ label: l.label, url: l.url }))
+  if (!props.links?.length) return []
+  return props.links.map((l) => ({ label: l.label, url: l.url, open_in_new_tab: l.open_in_new_tab }))
 })
 </script>

@@ -1,0 +1,41 @@
+{
+  "label": "Component",
+  "ref": "cs000000-0000-0000-0000-000000000001",
+  "body": "Contact Section",
+  "api_id": "ContactSection",
+  "icon": "fa-envelope",
+  "fields": [
+    {
+      "type": "Text",
+      "body": "Headline",
+      "api_id": "headline",
+      "appearance": "single_line",
+      "no_html": true,
+      "required": true
+    },
+    {
+      "type": "Text",
+      "body": "Subheading",
+      "api_id": "subheading",
+      "appearance": "textarea",
+      "no_html": true,
+      "required": false
+    },
+    {
+      "type": "Text",
+      "body": "Email",
+      "api_id": "email",
+      "appearance": "single_line",
+      "no_html": true,
+      "required": true
+    },
+    {
+      "type": "Text",
+      "body": "Location",
+      "api_id": "location",
+      "appearance": "single_line",
+      "no_html": true,
+      "required": true
+    }
+  ]
+}

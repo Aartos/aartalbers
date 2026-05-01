@@ -1,0 +1,57 @@
+{
+  "label": "Component",
+  "ref": "lp000000-0000-0000-0000-000000000001",
+  "body": "Leadership Philosophy",
+  "api_id": "LeadershipPhilosophy",
+  "icon": "fa-lightbulb",
+  "fields": [
+    {
+      "type": "Text",
+      "body": "Headline",
+      "api_id": "headline",
+      "appearance": "single_line",
+      "no_html": true,
+      "required": true
+    },
+    {
+      "type": "Text",
+      "body": "Body",
+      "api_id": "body",
+      "appearance": "textarea",
+      "no_html": true,
+      "required": true
+    },
+    {
+      "type": "Stack",
+      "body": "Value Cards",
+      "api_id": "value_cards",
+      "types": [
+        {
+          "ref": "vc000000-0000-0000-0000-000000000001",
+          "label": "Component",
+          "api_id": "ValueCard",
+          "position": 1
+        }
+      ],
+      "allow_multiple": true,
+      "max": 4,
+      "required": true
+    },
+    {
+      "type": "Text",
+      "body": "Quote",
+      "api_id": "quote",
+      "appearance": "textarea",
+      "no_html": true,
+      "required": true
+    },
+    {
+      "type": "Text",
+      "body": "Quote Attribution",
+      "api_id": "quote_attribution",
+      "appearance": "single_line",
+      "no_html": true,
+      "required": true
+    }
+  ]
+}

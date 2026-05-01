@@ -1,0 +1,40 @@
+{
+  "label": "Component",
+  "ref": "cc000000-0000-0000-0000-000000000001",
+  "body": "Core Competencies",
+  "api_id": "CoreCompetencies",
+  "icon": "fa-tasks",
+  "fields": [
+    {
+      "type": "Text",
+      "body": "Headline",
+      "api_id": "headline",
+      "appearance": "single_line",
+      "no_html": true,
+      "required": true
+    },
+    {
+      "type": "Text",
+      "body": "Subtitle",
+      "api_id": "subtitle",
+      "appearance": "single_line",
+      "no_html": true,
+      "required": false
+    },
+    {
+      "type": "Stack",
+      "body": "Competency Cards",
+      "api_id": "competency_cards",
+      "types": [
+        {
+          "ref": "cc000000-0000-0000-0000-000000000003",
+          "label": "Component",
+          "api_id": "CompetencyCard",
+          "position": 1
+        }
+      ],
+      "allow_multiple": true,
+      "required": false
+    }
+  ]
+}

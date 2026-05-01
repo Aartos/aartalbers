@@ -10,6 +10,7 @@
           v-for="link in resolvedLinks"
           :key="link.label"
           :href="link.url"
+          :target="link.open_in_new_tab ? '_blank' : '_self'"
           class="font-serif text-sm uppercase tracking-widest text-stone-500 dark:text-stone-500 hover:text-[#0D4D4D] dark:hover:text-teal-300 transition-colors"
         >{{ link.label }}</a>
       </div>
@@ -18,21 +19,19 @@
 </template>
 
 <script setup lang="ts">
-import type { SocialLinkItem } from '~/queries/homepage'
-
 const props = defineProps<{
   brandName?: string | null
   copyright?: string | null
-  socialLinks?: SocialLinkItem[] | null
+  links?: Array<{ label: string; url: string; open_in_new_tab?: boolean }> | null
 }>()
 
 const brandName = computed(() => props.brandName ?? 'Lead Architect')
 const copyright = computed(() => props.copyright ?? '2024 Systems Engineering. Built with precision and intent.')
 
-interface Link { label: string; url: string }
+interface Link { label: string; url: string; open_in_new_tab?: boolean }
 
 const resolvedLinks = computed<Link[]>(() => {
-  if (!props.socialLinks?.length) return []
-  return props.socialLinks.map((l) => ({ label: l.label, url: l.url }))
+  if (!props.links?.length) return []
+  return props.links.map((l) => ({ label: l.label, url: l.url, open_in_new_tab: l.open_in_new_tab }))
 })
 </script>

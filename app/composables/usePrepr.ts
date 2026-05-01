@@ -15,7 +15,7 @@ export function usePrepr() {
     )
 
     if (response.errors?.length) {
-      console.warn('[Prepr]', response.errors[0].message)
+      console.warn('[Prepr]', response.errors[0]?.message)
     }
 
     return response.data ?? null
