@@ -48,8 +48,6 @@ const props = defineProps<{
   statsNumber?: string | null
   statsLabel?: string | null
   statsSubtitle?: string | null
-  primaryCta?: string | null
-  secondaryCta?: string | null
   links?: Array<{ label: string; url: string; open_in_new_tab?: boolean }> | null
 }>()
 
@@ -58,8 +56,6 @@ const subheading = computed(() => props.subheading ?? 'Senior Backend Engineer &
 const portraitUrl = computed(() => props.portraitUrl ?? 'https://lh3.googleusercontent.com/aida-public/AB6AXuBReVHKJvI9ASVaG9FrN-0E_FFuACqzohxhKFnXBKiI2-nfFLw6mSpAK4ERnwCCpksf2EE_K3yG06HMUa96XtvH-XKAw-zkVuT29ONxVKW8BYcYtwfQKQb0M01uNULcUpKSaRCULrxEeOlokC7f1fMbnOtPGQ_AJglKjr23uEMtcJ_z3Pv7-2ydgwpKHcPSY9ukytKTQKv5ECm6VrXsRPiZJTC2enonCRK0ym3piHCp5sPoQoetcJTmZlNjS-9ucc4fBDAFe2ibJsU')
 const statsNumber = computed(() => props.statsNumber ?? '12+')
 const statsSubtitle = computed(() => props.statsSubtitle ?? 'Architectural Mastery')
-const primaryCta = computed(() => props.primaryCta ?? 'View Portfolio')
-const secondaryCta = computed(() => props.secondaryCta ?? 'Download CV')
 
 const headlineHtml = computed(() => {
   if (props.headline) return props.headline

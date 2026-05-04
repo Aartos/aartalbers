@@ -13,16 +13,6 @@ export const GET_PAGE_BY_SLUG = `
     Page(slug: $slug) {
       _id
       title
-      brand_name
-      footer_copyright
-      footer_links {
-        __typename
-        ... on Link {
-          label
-          url
-          open_in_new_tab
-        }
-      }
       content {
         __typename
         ... on HeroSection {
@@ -40,6 +30,7 @@ export const GET_PAGE_BY_SLUG = `
             ... on Link {
               label
               url
+              open_in_new_tab
             }
           }
         }

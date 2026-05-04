@@ -26,7 +26,7 @@ const slug = computed(() => {
   if (Array.isArray(s)) {
     return s.join('/')
   }
-  return s || ''
+  return s || '/'
 })
 
 const {data: page} = await useAsyncData<any | null>(`page-${slug.value}`, async () => {
@@ -42,8 +42,6 @@ const {data: page} = await useAsyncData<any | null>(`page-${slug.value}`, async 
     return null
   }
 })
-
-console.log('page', slug.value, page.value)
 
 const getComponent = (typename: string) => {
   switch (typename) {

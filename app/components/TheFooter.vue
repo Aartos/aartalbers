@@ -20,13 +20,11 @@
 
 <script setup lang="ts">
 const props = defineProps<{
-  brandName?: string | null
-  copyright?: string | null
   links?: Array<{ label: string; url: string; open_in_new_tab?: boolean }> | null
 }>()
 
-const brandName = computed(() => props.brandName ?? 'Lead Architect')
-const copyright = computed(() => props.copyright ?? '2024 Systems Engineering. Built with precision and intent.')
+const brandName = computed(() => 'Lead Architect')
+const copyright = computed(() => '2026 Aart Albers, creative digital architect.')
 
 interface Link { label: string; url: string; open_in_new_tab?: boolean }
 
