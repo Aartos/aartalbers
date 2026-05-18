@@ -40,6 +40,8 @@
 </template>
 
 <script setup lang="ts">
+import type {Link} from "~/queries/page";
+
 const props = defineProps<{
   badge?: string | null
   headline?: string | null
@@ -48,7 +50,7 @@ const props = defineProps<{
   statsNumber?: string | null
   statsLabel?: string | null
   statsSubtitle?: string | null
-  links?: Array<{ label: string; url: string; open_in_new_tab?: boolean }> | null
+  links?: Link[] | null
 }>()
 
 const badge = computed(() => props.badge ?? 'EXECUTIVE LEADERSHIP')
@@ -62,10 +64,8 @@ const headlineHtml = computed(() => {
   return 'Architecting Resilient <br /><span class="text-secondary italic">Digital Ecosystems</span>'
 })
 
-interface Link { label: string; url: string; open_in_new_tab?: boolean }
-
 const resolvedLinks = computed<Link[]>(() => {
   if (!props.links?.length) return []
-  return props.links.map((l) => ({ label: l.label, url: l.url, open_in_new_tab: l.open_in_new_tab }))
+  return props.links;
 })
 </script>

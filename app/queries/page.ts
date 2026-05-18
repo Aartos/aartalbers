@@ -1,11 +1,33 @@
 export interface PreprAsset {
-  url: string
+    url: string
 }
 
 export interface Page {
-  _id: string
-  title: string
-  content: any[]
+    _id: string
+    title: string
+    content: any[]
+}
+
+export interface ValueCard {
+    icon: string
+    title: string
+    description: string
+}
+
+export interface CompetencyCard {
+    category: string
+    title: string
+    description: string
+    image: { url: string }
+    tags: { body: string }[]
+    background_style?: 'white' | 'secondary' | 'primary'
+    is_featured: boolean
+}
+
+export interface Link {
+    label: string;
+    url: string;
+    open_in_new_tab?: boolean
 }
 
 export const GET_PAGE_BY_SLUG = `

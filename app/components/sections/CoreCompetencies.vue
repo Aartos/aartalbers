@@ -84,12 +84,12 @@
 </template>
 
 <script setup lang="ts">
-import type { CompetencyCardItem } from '~/queries/homepage'
+import type {CompetencyCard} from "~/queries/page";
 
 const props = defineProps<{
   headline?: string | null
   subtitle?: string | null
-  cards?: CompetencyCardItem[] | null
+  cards?: CompetencyCard[] | null
 }>()
 
 const headline = computed(() => props.headline ?? 'Core Competencies')
@@ -143,7 +143,7 @@ const defaultCards: ResolvedCard[] = [
 
 const resolvedCards = computed<ResolvedCard[]>(() => {
   if (!props.cards?.length) return defaultCards
-  return props.cards.map((c) => ({
+  return props.cards.map((c) => (<ResolvedCard>{
     category: c.category,
     title: c.title,
     description: c.description,

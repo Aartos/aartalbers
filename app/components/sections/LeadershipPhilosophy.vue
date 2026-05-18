@@ -43,12 +43,12 @@
 </template>
 
 <script setup lang="ts">
-import type { ValueCardItem } from '~/queries/homepage'
+import type { ValueCard } from '~/queries/page'
 
 const props = defineProps<{
   headline?: string | null
   body?: string | null
-  valueCards?: ValueCardItem[] | null
+  valueCards?: ValueCard[] | null
   quote?: string | null
   quoteAttribution?: string | null
 }>()
@@ -59,28 +59,11 @@ const headlineHtml = computed(() => {
 })
 
 const body = computed(() => props.body ?? 'I believe backend architecture is an exercise in empathy. We build systems not just to handle loads, but to provide reliability to users and maintainability to developers. My leadership focuses on radical transparency and technical rigor.')
-
 const quote = computed(() => props.quote ?? 'Complexity is a tax on productivity. My role is to simplify the core so the edges can flourish.')
-
 const quoteAttribution = computed(() => props.quoteAttribution ?? "THE ARCHITECT'S CREED")
 
-interface ValueCard {
-  icon: string
-  title: string
-  description: string
-}
-
-const defaultValueCards: ValueCard[] = [
-  { icon: 'psychology', title: 'Team Growth', description: 'Mentorship through pair programming and architectural reviews.' },
-  { icon: 'hub', title: 'Scalability', description: "Designing for tomorrow's scale without over-engineering today." },
-]
-
 const resolvedValueCards = computed<ValueCard[]>(() => {
-  if (!props.valueCards?.length) return defaultValueCards
-  return props.valueCards.map((c) => ({
-    icon: c.icon,
-    title: c.title,
-    description: c.description,
-  }))
+  if (!props.valueCards?.length) return []
+  return props.valueCards;
 })
 </script>
